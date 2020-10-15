@@ -1,26 +1,63 @@
 .home__wrapper{
     display: flex;
-    height: 60vh;
+    /* height: 60vh; */
+    /* border: 1px solid fuchsia; */
+    /* justify-content: space-between; */
+    width: 100%;
+    padding: 0 50px
+
 }
 
 .home__wrapper p{
-    font-size: 22px;
+    font-size: 18px;
     margin-top: 5px;
-    line-height: 32px;
+    line-height: 28px;
+}
+
+@media screen and (max-width: 875px) {
+    .home__wrapper{
+        flex-direction: column;
+        width: auto;
+        margin: 0 5%;
+        padding: 0;
+        align-items: center;
+    }
+
+    .home__intro{
+        margin-bottom: 20px;
+        margin-right: 0 !important;
+    }
+
+    .home__desc > h2 {
+        font-size: 40px !important;
+    }
+    
+
 }
 
 .home__intro {
-    width: 40%;
-    border: 1px solid gold;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid gold; */
+    background-size: cover;
+    background-position: center;
+    margin-right: 25px;
+    /* background-image: url('https://staticg.sportskeeda.com/editor/2020/10/b46cf-16020843441142-800.jpg'); */
 }
 
-.home__intro > h1 {
-    font-size: 50px;
+.home__intro img {
+    width: 100%;
+    height: auto;
     
 }
 
 .home__intro > div {
-    height: 500px
+    /* height: 500px */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+
 }
 
 .home__intro > div > img{
@@ -29,9 +66,13 @@
 }
 
 .home__desc {
-    /* width: 50%; */
-    padding: 0 10px;
-    border: 1px solid saddlebrown
+    flex: 1 1;
+    max-width: 650px;
+    /* border: 1px solid saddlebrown; */
+}
+
+.home__desc p {
+    /* padding: 0 150px 0 0; */
 }
 .home__desc > h2 {
     font-size: 50px;

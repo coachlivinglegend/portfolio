@@ -1,5 +1,5 @@
 footer{
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 .bottomFooterSocial{
@@ -19,6 +19,25 @@ footer{
     align-items: center;
     justify-content: center;
     margin: 0 5px;
+}
+
+.bottomFooterSocial.mobile{
+    display: none;
+}
+
+.bottomFooterSocial.mobile > .socialIconsContainer{
+    width: 35px !important;
+    height: 35px !important;
+}
+
+@media screen and (max-width: 520px) {
+    .bottomFooterSocial.mobile{
+        display: flex;
+    }    
+
+    .bottomFooterSocial{
+        display: none;
+    }
 }
 
 .socialIconsContainer:nth-child(1):hover{

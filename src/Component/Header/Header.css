@@ -1,6 +1,7 @@
 header{
     /* padding: 30px 0px; */
     transition: all 0.5s ease 0s;
+    padding: 0 50px
 }
 
 .header__wrapper{
@@ -8,7 +9,7 @@ header{
     justify-content: space-between;
     /* border: 1px solid firebrick; */
     align-items: center;
-    padding: .5rem 1rem
+    padding: .5rem 0
 }
 
 .header__logo{
@@ -26,6 +27,52 @@ header{
     height: 40px;    
 }
 
+
+.hamburger {
+    display: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    right: 0;
+    background-color: #e0e0e2;
+    overflow-y: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+    
+.sidenav li {
+    padding: 5px;
+    margin: 10px 5px;
+    width: fit-content;
+}
+    
+.closeButton {
+    position: absolute !important;
+    top: 52px;
+    right: 25px;
+    margin-left: 50px;
+}
+    
+.closeButton:hover {
+    cursor: pointer;
+}
+    
+
+@media screen and (max-width: 875px) {
+    .header__nav{
+        display: none;
+    }
+    .hamburger{
+        display: inline;
+    }
+
+}
+
 .header__nav__ul {
     display: flex;
     list-style: none;
@@ -34,7 +81,7 @@ header{
     height: 40px;    
 }
 
-.header__nav__ul > li{
+.header__nav__ul li{
     /* border: 1px solid gold; */
     font-size: 24px;
     margin: 10px 20px;
@@ -45,14 +92,14 @@ header{
     align-items: center;
 }
 
-.header__nav__ul > li:hover{
+.header__nav__ul li:hover{
     cursor: pointer
 }
 .header__nav__ul span {
     margin: 10px 25px;
 }
 
-.header__nav__ul > li::before{
+.header__nav__ul li::before{
     content: "";
     background: #7FDBFF;
     position: absolute;
@@ -67,7 +114,7 @@ header{
     z-index: -1;
 }
 
-.header__nav__ul > li:hover::before, .header__nav__ul > li:focus::before{
+.header__nav__ul li:hover::before, .header__nav__ul li:focus::before{
     animation: .5s forwards hover-v linear;
     animation-fill-mode: forwards;
 }
