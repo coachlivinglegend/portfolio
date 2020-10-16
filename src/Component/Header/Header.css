@@ -27,9 +27,9 @@ header{
     height: 40px;    
 }
 
-
 .hamburger {
     display: none;
+    cursor: pointer;
 }
 
 .sidenav {
@@ -39,23 +39,35 @@ header{
     z-index: 50;
     top: 0;
     right: 0;
-    background-color: #e0e0e2;
+    background-color: var(--back);
+    color: var(--text);
     overflow-y: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 40px;
 }
     
 .sidenav li {
     padding: 5px;
-    margin: 10px 5px;
+    margin: 20px 5px;
     width: fit-content;
+    font-size: 24px;
 }
-    
+.sidebarNav {
+    list-style: none;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+
+}
+
+
 .closeButton {
-    position: absolute !important;
+    /* position: absolute !important;
     top: 52px;
     right: 25px;
-    margin-left: 50px;
+    margin-left: 50px; */
 }
     
 .closeButton:hover {
@@ -70,6 +82,19 @@ header{
     .hamburger{
         display: inline;
     }
+
+    .header__darkMode {
+        display: none;
+    }
+
+    .header__darkMode.mobile {
+        display: block;
+    }
+
+    header{
+        padding: 0 5%;
+    }
+    
 
 }
 
@@ -153,12 +178,18 @@ header{
        }
   }
 
+.header__darkMode{
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+
+}
+
 .header__darkMode > svg {
     /* fill: green; */
-    width: 50px;
-    height: 50px;
+    width: 24px;
+    height: 24px;
 }
 
 .header__darkMode__light {
-    display: none;
+    fill: white;
 }

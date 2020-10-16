@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
 import {ReactComponent as Light} from '../../assets/bright.svg'
@@ -6,9 +6,19 @@ import {ReactComponent as Dark} from '../../assets/dark.svg'
 import HamburgerMenu from 'react-hamburger-menu'
 
 
-const Header = () => {
+const Header = ({scaleUp, scaleDown}) => {
+    const [mode, setMode] = useState(true)
+    useEffect(() => {
+        if (!mode) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    }, [mode])
+
+    
     const handleOpen = () => {
-        document.getElementById("mySidenav").style.width = "60%";
+        document.getElementById("mySidenav").style.width = "100%";
     }
 
     const handleClose = () => {
@@ -18,27 +28,43 @@ const Header = () => {
     return (
         <header>
             <nav className='header__wrapper'>
-                <Link className='link' to='/'>
+                <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} className='link' to='/'>
                     <div className='header__logo'>
                         <span>daniel<br/>Beckley</span>
                     </div>
                 </Link>
                 <div className='header__nav'>
                     <ul className='header__nav__ul'>
-                    <Link className='link' to='/about'><li><span>About</span></li></Link>
-                    <Link className='link' to='/projects'><li><span>Projects</span></li></Link>
-                    <a className='link' href='#'><li><span>Resume</span></li></a>
-                    <Link className='link' to='/contact'><li><span>Contact</span></li></Link>
+                    <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown}  className='link' to='/about'><li><span>About</span></li></Link>
+                    <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown}  className='link' to='/projects'><li><span>Projects</span></li></Link>
+                    <a onMouseEnter={scaleUp} onMouseLeave={scaleDown} className='link' href='#'><li><span>Resume</span></li></a>
+                    <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} className='link' to='/contact'><li><span>Contact</span></li></Link>
                     </ul>
                 </div>
-                <div className='header__darkMode'>
-                <Light className='header__darkMode__light'/> 
-                <Dark className='header__darkMode__dark'/>
+                <div onMouseEnter={scaleUp} onMouseLeave={scaleDown}  className='header__darkMode'>
+                {   
+                    !mode 
+                    ?
+                    <Light onClick={() => setMode(mode => !mode)} className='header__darkMode__light'/> 
+                    :
+                    <Dark onClick={() => setMode(mode => !mode)} className='header__darkMode__dark'/>
+                }
                 </div>
-                <div className="hamburger"><HamburgerMenu isOpen={false} menuClicked={handleOpen} className="menu" width={18} height={15}/> </div>
+                <div className="hamburger"><HamburgerMenu onMouseEnter={scaleUp} onMouseLeave={scaleDown}  isOpen={false} menuClicked={handleOpen} className="menu" width={20} height={20} color={mode ? 'black' : 'white'}/> </div>
             </nav>
             <div className="sidenav" id="mySidenav">
-                <HamburgerMenu isOpen={true} menuClicked={handleClose} className="closeButton" width={18} height={15}/>
+                <div style={{display: "flex", justifyContent: "space-between", padding: "0 20px"}}>
+                    <div className='header__darkMode mobile'>
+                    {   
+                        !mode 
+                        ?
+                        <Light onClick={() => setMode(mode => !mode)} className='header__darkMode__light'/> 
+                        :
+                        <Dark onClick={() => setMode(mode => !mode)} className='header__darkMode__dark'/>
+                    }
+                    </div>
+                    <HamburgerMenu onMouseEnter={scaleUp} onMouseLeave={scaleDown}  isOpen={true} menuClicked={handleClose} className="closeButton" width={24} height={24} color={mode ? 'black' : 'white'}/>
+                </div>
                 <div>
                     <ul className="sidebarNav">
                         <Link className='link' to='/about'><li><span>About</span></li></Link>
@@ -48,7 +74,6 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
-
         </header>
     )
 }

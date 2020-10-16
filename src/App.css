@@ -1,6 +1,31 @@
+[data-theme='light'] {
+  --back: #d2e4e8;
+  --text: #070c0d;
+}
+
+[data-theme='dark'] {
+  --text: #f2f7f8;
+  --back: #070c0d;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --text: #d2e4e8;
+    --back: black;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --back: #d2e4e8;
+    --text: black;
+  }
+} */
+
 .app {
   min-height: 100vh;
-  background-color: #d2e4e8;
+  background-color: var(--back);
+  color: var(--text);
   /* background-color: white; */
   /* padding: 30px 100px; */
   display: flex;
@@ -11,4 +36,19 @@
 .link{
   text-decoration: none;
   color: inherit;
+}
+
+.cursor{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: gray;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: width .2s cubic-bezier(.75,-.27,.3,1.33);
+  mix-blend-mode: difference;
+  z-index: 10000000;
+  user-select: none;
+  pointer-events: none;
 }
