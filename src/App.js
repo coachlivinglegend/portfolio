@@ -37,8 +37,8 @@ const onMouseLeave = () => {
       <Header scaleUp={onMouseEnter} scaleDown={onMouseLeave}/>
       <Switch>
         <Route exact path='/' render={(props) => <Home {...props} scaleUp={onMouseEnter} scaleDown={onMouseLeave}/>}/>
-        <Route path='/projects' render={(props) => <Contact {...props} scaleUp={onMouseEnter} scaleDown={onMouseLeave}/>}/>
-        <Route path='/contact' render={(props) => <Projects {...props} scaleUp={onMouseEnter} scaleDown={onMouseLeave}/>} />
+        <Route path='/projects' render={(props) => <Projects {...props} scaleUp={onMouseEnter} scaleDown={onMouseLeave}/>}/>
+        <Route path='/contact' render={(props) => <Contact {...props} scaleUp={onMouseEnter} scaleDown={onMouseLeave}/>} />
       </Switch>
       <Footer scaleUp={onMouseEnter} scaleDown={onMouseLeave}/>
     </div>
