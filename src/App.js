@@ -8,7 +8,6 @@ import Projects from './Pages/Projects/Projects'
 import { Route, Switch } from 'react-router-dom';
 import { animated, useSpring } from 'react-spring';
 
-
 const App = () => {
   const [coords, setCoords] = useState({x: 0, y:0})
   const [hovered, setHovered] = useState(false);
@@ -17,19 +16,19 @@ const App = () => {
     transform: hovered
       ? `translateY(${coords.y - 15 + window.scrollY}px) translateX(${coords.x - 15  + window.scrollX}px) scale(2.5)`
       : `translateY(${coords.y - 15 + window.scrollY}px) translateX(${coords.x - 15 + window.scrollX}px) scale(1)`,
-});
+  });
 
-window.addEventListener('mousemove', useCallback(({ clientX, clientY, pageX, offsetX }) => {
-  setCoords({x: clientX, y: clientY})
-}, [setCoords, window.scrollX]))
+  window.addEventListener('mousemove', useCallback(({ clientX, clientY }) => {
+    setCoords({x: clientX, y: clientY})
+  }, [setCoords, window.scrollX]))
 
-const onMouseEnter = () => {
-  setHovered(true);
-};
+  const onMouseEnter = () => {
+    setHovered(true);
+  };
 
-const onMouseLeave = () => {
-  setHovered(false);
-};
+  const onMouseLeave = () => {
+    setHovered(false);
+  };
 
   return (
     <>

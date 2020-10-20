@@ -35,10 +35,10 @@ const Header = ({scaleUp, scaleDown}) => {
                 </Link>
                 <div className='header__nav'>
                     <ul className='header__nav__ul'>
-                    <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown}  className='link' to='/about'><li><span>About</span></li></Link>
-                    <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown}  className='link' to='/projects'><li><span>Projects</span></li></Link>
-                    <a onMouseEnter={scaleUp} onMouseLeave={scaleDown} className='link' href='#'><li><span>Resume</span></li></a>
-                    <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} className='link' to='/contact'><li><span>Contact</span></li></Link>
+                    <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/about'><li><span>About</span></li></Link>
+                    <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose}  className='link' to='/projects'><li><span>Projects</span></li></Link>
+                    <a onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' href='#'><li><span>Resume</span></li></a>
+                    <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/contact'><li><span>Contact</span></li></Link>
                     </ul>
                 </div>
                 <div onMouseEnter={scaleUp} onMouseLeave={scaleDown}  className='header__darkMode'>
@@ -67,10 +67,10 @@ const Header = ({scaleUp, scaleDown}) => {
                 </div>
                 <div>
                     <ul className="sidebarNav">
-                        <Link className='link' to='/about'><li><span>About</span></li></Link>
-                        <Link className='link' to='/projects'><li><span>Projects</span></li></Link>
-                        <a className='link' href='#'><li><span>Resume</span></li></a>
-                        <Link className='link' to='/contact'><li><span>Contact</span></li></Link>
+                        <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/about'><li><span>About</span></li></Link>
+                        <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/projects'><li><span>Projects</span></li></Link>
+                        <a onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' href='#'><li><span>Resume</span></li></a>
+                        <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/contact'><li><span>Contact</span></li></Link>
                     </ul>
                 </div>
             </div>
