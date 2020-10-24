@@ -38,6 +38,7 @@ img{
 
 .project__info > * {
     margin-top: 5px;
+    line-height: 25px;
 }
 
 .project__feat{
