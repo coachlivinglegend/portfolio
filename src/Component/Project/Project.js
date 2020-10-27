@@ -1,8 +1,6 @@
 import React from 'react'
 import './Project.css'
-import Port from "../../assets/portsnip.PNG";
-import test from '../../assets/test.png'
-const Project = ({name, image, type, link, description}) => {
+const Project = ({name, image, tech, github, website, description}) => {
     const handleOpen = () => {
         document.querySelector('.project__showcase').style.width = "500px";
     }
@@ -21,19 +19,21 @@ const Project = ({name, image, type, link, description}) => {
                 <h2>{name}</h2>
                 <p>{description}</p>
                 <div className="project__feat">
-                    <div className="project__feat__item">React</div>
-                    <div className="project__feat__item">Firebase</div>
-                    <div className="project__feat__item">ContextAPI</div>
+                    {
+                        tech.map(th => {
+                            return <div className="project__feat__item">{th}</div>
+                        })
+                    }
                 </div>
             </div>  
             <div className="project__links">
                 <div>
                     <h3>Website</h3>
-                    <a href={link}>{link}</a>
+                    <a href={website}>{website}</a>
                 </div>
                 <div>
                     <h3>Github</h3>
-                    <a href={link}>{link}</a>
+                    <a href={github}>{github}</a>
                 </div>
             </div>
         </div>

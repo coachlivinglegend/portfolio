@@ -9,13 +9,10 @@ const Projects = () => {
             <h1>Selected Projects</h1>
             <div className="project__wrapper">
             {
-                ProjectData.map(({key, name, image, type, link, description}) => {
-                    return <Project key={key} name={name} type={type} image={image} link={link} description={description}/>
+                ProjectData.slice(0).reverse().map(({key, name, image, tech, github, website, description}) => {
+                    return <Project key={key} name={name} tech={tech} image={image} github={github} website={website} description={description}/>
                 })
             }
-                {/* <Project/>
-                <Project/>
-                <Project/> */}
             </div>
         </div>
     )
