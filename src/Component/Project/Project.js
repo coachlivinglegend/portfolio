@@ -1,19 +1,10 @@
 import React from 'react'
 import './Project.css'
 const Project = ({name, image, tech, github, website, description}) => {
-    const handleOpen = () => {
-        document.querySelector('.project__showcase').style.width = "500px";
-    }
-
-    const handleClose = () => {
-        document.querySelector('.project__showcase').style.width = "0";
-    }
-
-
     return (
         <div className='project'>
             <div className="project__demo">
-                <img src={image}></img>
+                <img alt='' src={image}></img>
             </div>
             <div className="project__info">
                 <h2>{name}</h2>
@@ -33,7 +24,7 @@ const Project = ({name, image, tech, github, website, description}) => {
                 </div>
                 <div>
                     <h3>Github</h3>
-                    <a href={github}>{github}</a>
+                    <a href={github || '#'}>{github || 'Repo is private.'}</a>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 .project{
     border-radius: 10px;
-    border: 2px solid lightcoral;
+    border: 2px solid rgb(82, 91, 100);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,9 +28,9 @@ img{
     
 }
 .project__info{
-    border-top: 1px solid lightcoral;
+    border-top: 1px solid rgb(82, 91, 100);
     margin-top: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: var(--back);
     padding: 5px;
 

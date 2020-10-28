@@ -1,3 +1,11 @@
 .home__desc.contact a{
     color: var(--text)
 }
+
+.home__desc.contact {
+    margin-top: 15px
+}
+
+.quotetext.small{
+    font-size: 30px;
+}

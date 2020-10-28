@@ -6,9 +6,11 @@ const Contact = () => {
         <div>
             <div className="home__wrapper">
                 <div className="home__intro">
-                    <figure>
-                        <img src="https://res.cloudinary.com/favourcodes/image/upload/v1598125526/profile-min.png" alt='Home'/>
-                    </figure>
+                <div className="home__intro">
+                    <div>
+                        <h1 className='quotetext small'>I can do all things through Christ, Google, StackOverflow and MDN docs.</h1>
+                    </div>
+                </div>
                 </div>
                 <div className="home__desc contact">
                     <h2>GET IN TOUCH</h2>

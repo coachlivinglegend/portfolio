@@ -15,7 +15,6 @@ const Header = ({scaleUp, scaleDown}) => {
             document.documentElement.setAttribute('data-theme', 'light');
         }
     }, [mode])
-
     
     const handleOpen = () => {
         document.getElementById("mySidenav").style.width = "100%";
@@ -35,9 +34,8 @@ const Header = ({scaleUp, scaleDown}) => {
                 </Link>
                 <div className='header__nav'>
                     <ul className='header__nav__ul'>
-                    <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/about'><li><span>About</span></li></Link>
                     <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose}  className='link' to='/projects'><li><span>Projects</span></li></Link>
-                    <a onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' href='#'><li><span>Resume</span></li></a>
+                    <a onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' href='https://drive.google.com/file/d/1xiGIuWEE47ck2J7fH8ky8lrRGjSySxRN/view?usp=sharing'><li><span>Resume</span></li></a>
                     <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/contact'><li><span>Contact</span></li></Link>
                     </ul>
                 </div>
@@ -69,7 +67,7 @@ const Header = ({scaleUp, scaleDown}) => {
                     <ul className="sidebarNav">
                         <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/about'><li><span>About</span></li></Link>
                         <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/projects'><li><span>Projects</span></li></Link>
-                        <a onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' href='#'><li><span>Resume</span></li></a>
+                        <a onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' href='https://drive.google.com/file/d/1xiGIuWEE47ck2J7fH8ky8lrRGjSySxRN/view?usp=sharing'><li><span>Resume</span></li></a>
                         <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/contact'><li><span>Contact</span></li></Link>
                     </ul>
                 </div>

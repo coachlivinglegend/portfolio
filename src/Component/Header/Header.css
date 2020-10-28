@@ -1,5 +1,4 @@
 header{
-    /* padding: 30px 0px; */
     transition: all 0.5s ease 0s;
     padding: 0 50px
 }
@@ -7,13 +6,11 @@ header{
 .header__wrapper{
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid firebrick; */
     align-items: center;
     padding: .5rem 0
 }
 
 .header__logo{
-    /* border: 1px solid blue; */
     border-radius: 50%;
     height: 40px;
     width: 40px;
@@ -21,9 +18,7 @@ header{
 }
 
 .header__nav{
-    /* border: 1px solid palevioletred; */
     flex: 0.5;
-    /* align-self: flex-end; */
     height: 40px;    
 }
 
@@ -59,22 +54,12 @@ header{
     flex-direction: column;
     align-items: center;
     padding-left: 0;
-
-}
-
-
-.closeButton {
-    /* position: absolute !important;
-    top: 52px;
-    right: 25px;
-    margin-left: 50px; */
 }
     
 .closeButton:hover {
     cursor: pointer;
 }
     
-
 @media screen and (max-width: 875px) {
     .header__nav{
         display: none;
@@ -82,20 +67,15 @@ header{
     .hamburger{
         display: inline;
     }
-
     .header__darkMode {
         display: none;
     }
-
     .header__darkMode.mobile {
         display: block;
     }
-
     header{
         padding: 0 5%;
     }
-    
-
 }
 
 .header__nav__ul {
@@ -107,7 +87,7 @@ header{
 }
 
 .header__nav__ul li{
-    /* border: 1px solid gold; */
+    border-bottom: 2px solid transparent;
     font-size: 24px;
     margin: 10px 20px;
     height: 40px;
@@ -115,16 +95,19 @@ header{
     z-index: 1;
     display: flex;
     align-items: center;
+    transition: all 0.5s;
 }
 
 .header__nav__ul li:hover{
-    cursor: pointer
+    cursor: pointer;
+    border-bottom: 2px solid black;
+
 }
 .header__nav__ul span {
     margin: 10px 25px;
 }
 
-.header__nav__ul li::before{
+/* .header__nav__ul li::before{
     content: "";
     background: #7FDBFF;
     position: absolute;
@@ -176,7 +159,7 @@ header{
         height: 3px;
         opacity: .02;
        }
-  }
+  } */
 
 .header__darkMode{
     cursor: pointer;

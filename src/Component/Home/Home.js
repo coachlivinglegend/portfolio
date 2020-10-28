@@ -1,13 +1,13 @@
 import React from 'react'
 import './Home.css'
-const Home = () => {
-    
+const Home = ({scaleUp, scaleDown}) => {
     return (
         <div className="home__wrapper">
             <div className="home__intro">
-                <figure>
-                    <img src="https://res.cloudinary.com/favourcodes/image/upload/v1598125526/profile-min.png" alt='Home'/>
-                </figure>
+                <div>
+                    <h1 className='quotetext'><q>I will study and prepare myself, and I know that someday my chance will come.</q></h1>
+                    <h6>ABRAHAM LINCOLN</h6>
+                </div>
             </div>
             <div className="home__desc">
                 <h2>FULL-STACK<br/> JAVASCRIPT DEVELOPER</h2>
@@ -22,9 +22,9 @@ const Home = () => {
                 <br/>
 
 
-                <p>When I'm not peeling my hair out battling bugs on VSCode, I'm spending my time preparing 
+                <p>When I'm not pulling my hair out battling bugs on VSCode, I'm spending my time preparing 
                 high school students for local and international Math competitions. 
-                You can find out more about that here.</p>                
+                You can find out more about that <a target='_blank' className='link' rel='noopener noreferrer' href='https://welkin-intl-school.herokuapp.com/awards'><span onMouseEnter={scaleUp} onMouseLeave={scaleDown} className='here'>here.</span></a></p>                
             </div>
         </div>
     )

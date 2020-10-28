@@ -6,7 +6,7 @@
         "description": "This was my first 'proper' website. A website showing the pizza sold in a particular pizza place. HTML and CSS were still a bit overwhelming then, lol. I didn't have my responsiveness on lock then. I could have gone back to fix it but I like that it reminds me of my progress.",
         "tech": ["HTML", "CSS"],
         "github": "https://github.com/coachlivinglegend/uitestpizza",
-        "website": "https://coachlivinglegend.github.io/uitestpizza/"
+        "website": "https://coachlivinglegend.github.io/uitestpizza"
     },
     {
         "key": 1,
@@ -15,7 +15,7 @@
         "description": "After learning the beauties that are flexbox and CSS grid, I was so anxious to use my new found knowledge. I searched online for a website whose design I liked and I tried to clone it from scratch. Pure HTML and CSS, fully responsive. This was 3 weeks after I started learning web development. Crazy, right?",
         "tech": ["HTML", "CSS"],
         "github": "https://github.com/coachlivinglegend/finaluitest",
-        "website": "https://coachlivinglegend.github.io/finaluitest/"
+        "website": "https://coachlivinglegend.github.io/finaluitest"
     },
     {
         "key": 2,
@@ -24,7 +24,7 @@
         "description": "My first javascript website. A simple website that allows users to add a link to their favourite websites so other users can visit. It was a project from the book I used in learning javascript, The JSWay.",
         "tech": ["JavaScript"],
         "github": "https://github.com/coachlivinglegend/TheJSWay---Project-2",
-        "website": "https://coachlivinglegend.github.io/TheJSWay---Project-2/"
+        "website": "https://coachlivinglegend.github.io/TheJSWay---Project-2"
     },
     {
         "key": 3,
@@ -33,7 +33,7 @@
         "description": "This was my first React app. A simple app that makes an API call to get an array of robots, displays them and gives you the functionality of finding a particular robot by name. State was managed with Redux.",
         "tech": ["React", "Redux"],
         "github": "https://github.com/coachlivinglegend/robofriends",
-        "website": "https://coachlivinglegend.github.io/robofriends/"
+        "website": "https://coachlivinglegend.github.io/robofriends"
     },
     {
         "key": 4,
@@ -42,7 +42,7 @@
         "description": "A complete fullstack project. This website was built using Clarifai's API. Clarifai's face recognition model, apparrell recognition and many others. Users upload pictures from their device or paste a link pointing to an image, the image is sent to Clarifai, a response is gotten based on the image sent and some calculations are made before the result is displayed to the user. Cool stuff. add a link to their favourite websites so other users can visit. The website allows users to create an account before they can usee the service.",
         "tech": ["React", "ExpressJS", "PostgreSQL"],
         "github": "https://github.com/coachlivinglegend/bigsmartbrain",
-        "website": "https://bigsmartbrain.netlify.app/"
+        "website": "https://bigsmartbrain.netlify.app"
     },
     {
         "key": 5,
@@ -51,16 +51,15 @@
         "description": "An e-commerce web-app. The website has all the functionalities of a standard e-commerce website. Users can create an account, log in on the website so that their cart can be stored for the next time they visit the site. The authentication is handled with firebase. The items are also stored on Firebase's firestore. Redux, Redux Saga handled the state management, I also have a branch of the site that ContextAPI was used for state management.",
         "tech": ["React", "SASS", "Styled-Components", "Redux", "ReduxSaga", "ReduxPersist", "Firebase", "Stripe API", "Paystack API"],
         "github": "https://github.com/coachlivinglegend/crwn-ecommerce",
-        "website": "https://crwn-cloth-elive.herokuapp.com/"
+        "website": "https://crwn-cloth-elive.herokuapp.com"
     },
     {
         "key": 6,
         "name": "Welkin International School",
         "image": "https://res.cloudinary.com/dk0k3povu/image/upload/v1603834788/misc/welkinsnip_zqowrx.png",
-        "description": "A headless CMS website built with React, Apollo and GraphCMS e-commerce web-app. The website has all the functionalities of a standard e-commerce website. Users can create an account, log in on the website so that their cart can be stored for the next time they visit the site. The authentication is handled with firebase. The items are also stored on Firebase's firestore. Redux, Redux Saga handled the state management, I also have a branch of the site that ContextAPI was used for state management.",
-        "tech": ["React", "SASS", "Styled-Components", "Redux", "Redux Saga", "Reeux-Persist", "Firebase", "Stripe API", "Paystack API"],
-        "github": "https://github.com/coachlivinglegend/crwn-ecommerce",
-        "website": "https://welkin-intl-school.herokuapp.com/"
+        "description": "A headless CMS school website built with React, Apollo and GraphCMS. A fully functioning student portal and LMS is in the works.",
+        "tech": ["React", "Apollo", "GraphCMS"],
+        "website": "https://welkin-intl-school.herokuapp.com"
     },
     {
         "key": 7,
@@ -69,6 +68,6 @@
         "description": "A real-time chat app inspired by Whatsapp Web. Firefox handles the authentication but user data is stored on a MongoDB database. NodeJS and ExpressJS was used for server-side. Front-end done with React. MongoDB is not a real-time database so I had to use Pusher as a web socket to make it real-time. Hands down the 'toughest' app I've built so far.",
         "tech": ["React", "Firebase", "ExpressJS", "MongoDB", "Mongoose", "Pusher"],
         "github": "https://github.com/coachlivinglegend/whatsapp",
-        "website": "https://my-whatsapp-clone.netlify.app/"
+        "website": "https://my-whatsapp-clone.netlify.app"
     }
 ]

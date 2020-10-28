@@ -40,37 +40,33 @@ footer{
     }
 }
 
-.socialIconsContainer:nth-child(1):hover{
+.socialIconsContainer.face:hover{
     background-color: #3b5998;
     color: white;
     cursor: pointer;
 }
 
-.socialIconsContainer:nth-child(2):hover{
+.socialIconsContainer.tweet:hover{
     background-color: #00aced;
     cursor: pointer;
     color: white;
 
 }
 
-.socialIconsContainer:nth-child(3):hover{
+.socialIconsContainer.git:hover{
     background-color: black;
     cursor: pointer;
     color: white;
 }
 
-.socialIconsContainer:nth-child(4):hover{
+.socialIconsContainer.link:hover{
     background-color: #007bb6;
     cursor: pointer;
     color: white;
-
-
 }
 
-.socialIconsContainer:nth-child(5):hover{
+.socialIconsContainer.insta:hover{
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     cursor: pointer;
     color: white;
-
-
 }
