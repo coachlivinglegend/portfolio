@@ -65,7 +65,7 @@ const Header = ({scaleUp, scaleDown}) => {
                 </div>
                 <div>
                     <ul className="sidebarNav">
-                        <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/about'><li><span>About</span></li></Link>
+                        <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/'><li><span>Home</span></li></Link>
                         <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/projects'><li><span>Projects</span></li></Link>
                         <a onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' href='https://drive.google.com/file/d/1xiGIuWEE47ck2J7fH8ky8lrRGjSySxRN/view?usp=sharing'><li><span>Resume</span></li></a>
                         <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} onClick={handleClose} className='link' to='/contact'><li><span>Contact</span></li></Link>

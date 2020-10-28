@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Home.css'
 const Home = ({scaleUp, scaleDown}) => {
     return (
@@ -15,6 +16,7 @@ const Home = ({scaleUp, scaleDown}) => {
                 I have experience working Front-end with HTML5, CSS3, React, Firebase, Redux, Redux-Saga, ContextAPI, Apollo, GraphQL. Back-end server side with NodeJS, ExpressJS and database with PostgreSQL and MongoDB.
                 I have also worked with GraphCMS as a headless CMS.</p>
 
+               <p style={{margin: "7px 0"}}>Check out some of my projects <Link to='/projects' className='link'><span onMouseEnter={scaleUp} onMouseLeave={scaleDown} className='here'>here.</span></Link></p>
                 <p>
                     I am currently learning Python for Machine Learning and Data Science and C++ for Competitive Programming.
                 </p>

@@ -8,7 +8,7 @@ const Contact = () => {
                 <div className="home__intro">
                 <div className="home__intro">
                     <div>
-                        <h1 className='quotetext small'>I can do all things through Christ, Google, StackOverflow and MDN docs.</h1>
+                        <h1 className='quotetext small'>I can do all things through Christ, Google, StackOverflow and MDN docs which strengthens me.</h1>
                     </div>
                 </div>
                 </div>

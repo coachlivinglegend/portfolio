@@ -38,6 +38,10 @@ footer{
     .bottomFooterSocial{
         display: none;
     }
+    .project__links a {
+        font-size: 12px;
+    }
+    
 }
 
 .socialIconsContainer.face:hover{
