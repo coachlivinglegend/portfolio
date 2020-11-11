@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap"
 import './Contact.css'
 
 const Contact = () => {
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".home__intro", {duration: 2, ease:"bounce", x: -300})
+        if (window.innerWidth > 875) {
+            gsap.from(".home__desc.contact", {duration: 2, ease:"bounce", x: 300})
+        }
+        gsap.from(".quotetext.small", {duration: 1, delay:0.5, opacity: 0})
+        if (window.innerWidth <= 875) {
+            gsap.from(".home__desc.contact", {duration: 2, scrollTrigger: {trigger: ".home__desc", start: "top 70%"}, ease:"bounce", opacity: 0, x: 300})            
+        }
+    }, [])
+
     return (
         <div>
             <div className="home__wrapper">
                 <div className="home__intro">
-                <div className="home__intro">
                     <div>
                         <h1 className='quotetext small'>I can do all things through Christ, Google, StackOverflow and MDN docs which strengthens me.</h1>
                     </div>
-                </div>
                 </div>
                 <div className="home__desc contact">
                     <h2>GET IN TOUCH</h2>

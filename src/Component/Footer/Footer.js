@@ -1,9 +1,20 @@
-import React from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React, { useEffect } from 'react'
 import './Footer.css'
 
 const Footer = ({scaleUp, scaleDown}) => {
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        if (window.innerWidth <= 875) {
+            gsap.from('.footer', {duration: 2, scrollTrigger: {trigger: '.footer', start: "top 99%"}, ease: "in", opacity: 0, y: -100})
+        } else {
+            gsap.from('.footer', {duration: 1, delay : 2, ease: "in", opacity: 0, y: 100})
+        }
+    }, [])
     return (
-        <footer>
+        <footer className='footer'>
             <div className="bottomFooterSocial">
                 <a target='_blank' rel='noopener noreferrer' className='link' href="https://web.facebook.com/coachlivinglegend"><div onMouseEnter={scaleUp} onMouseLeave={scaleDown} className="socialIconsContainer face"><i className="fab fa-facebook-f fa-2x"></i></div></a>
                 <a target='_blank' rel='noopener noreferrer' className='link' href="https://twitter.com/omnisavage"><div onMouseEnter={scaleUp} onMouseLeave={scaleDown} className="socialIconsContainer tweet"><i className="fab fa-twitter fa-2x"></i></div></a>

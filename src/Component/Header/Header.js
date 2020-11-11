@@ -4,10 +4,18 @@ import { Link } from 'react-router-dom'
 import {ReactComponent as Light} from '../../assets/bright.svg'
 import {ReactComponent as Dark} from '../../assets/dark.svg'
 import HamburgerMenu from 'react-hamburger-menu'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import gsap from 'gsap/gsap-core'
+
 
 
 const Header = ({scaleUp, scaleDown}) => {
     const [mode, setMode] = useState(true)
+    // useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
+    //     gsap.from('.header', {duration: 1, delay : 2, ease: "in", opacity: 0, y: -100})
+    // }, [])
+    
     useEffect(() => {
         if (!mode) {
             document.documentElement.setAttribute('data-theme', 'dark');
@@ -25,7 +33,7 @@ const Header = ({scaleUp, scaleDown}) => {
     }
 
     return (
-        <header>
+        <header className='header'>
             <nav className='header__wrapper'>
                 <Link onMouseEnter={scaleUp} onMouseLeave={scaleDown} className='link' to='/'>
                     <div className='header__logo'>

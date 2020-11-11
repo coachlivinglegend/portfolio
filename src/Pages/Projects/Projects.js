@@ -10,7 +10,7 @@ const Projects = () => {
             <div className="project__wrapper">
             {
                 ProjectData.slice(0).reverse().map(({key, name, image, tech, github, website, description}) => {
-                    return <Project key={key} name={name} tech={tech} image={image} github={github} website={website} description={description}/>
+                    return <Project key={key} idx={key} name={name} tech={tech} image={image} github={github} website={website} description={description}/>
                 })
             }
             </div>
