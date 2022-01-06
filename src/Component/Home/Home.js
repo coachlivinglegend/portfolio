@@ -33,7 +33,7 @@ const Home = ({scaleUp, scaleDown}) => {
             </div>
             <div className="home__desc">
                 <h2>FULL-STACK<br/> JAVASCRIPT DEVELOPER</h2>
-                <p>I am Daniel Beckley, a fullstack javascript junior developer.
+                <p>I am Daniel Beckley, a fullstack javascript developer.
                 I have experience working Front-end with HTML5, CSS3, React, Firebase, Redux, Redux-Saga, ContextAPI, Apollo, GraphQL. Back-end server side with NodeJS, ExpressJS and database with PostgreSQL and MongoDB.
                 I have also worked with GraphCMS as a headless CMS.</p>
 
